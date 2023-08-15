@@ -1,7 +1,7 @@
 
 exports.creds = {
   // Required
-  identityMetadata: 'https://login.microsoftonline.com/YOUR_TENANT_GUID/.well-known/openid-configuration', 
+  identityMetadata: 'https://login.microsoftonline.com/f4ae20ae-32c3-4e78-a38e-01d4426bf0f6/.well-known/openid-configuration', 
   // or equivalently: 'https://login.microsoftonline.com/<tenant_guid>/.well-known/openid-configuration'
   //
   // or you can use the common endpoint
@@ -9,7 +9,7 @@ exports.creds = {
   // To use the common endpoint, you have to either set `validateIssuer` to false, or provide the `issuer` value.
 
   // Required, the client ID of your app in AAD  
-  clientID: '<your_client_id>',
+  clientID: '55155cc7-b3fb-4363-962f-cb194797812f',
 
   // Required, must be 'code', 'code id_token', 'id_token code' or 'id_token'
   responseType: 'code id_token',
@@ -18,14 +18,15 @@ exports.creds = {
   responseMode: 'form_post',
 
   // Required, the reply URL registered in AAD for your app
-  redirectUrl: 'https://your_public_url/auth/openid/return', 
+  redirectUrl: 'http://localhost:3000/auth/openid/return', 
+
 
   // Required if we use http for redirectUrl
   allowHttpForRedirectUrl: true,
   
   // Required if `responseType` is 'code', 'id_token code' or 'code id_token'. 
   // If app key contains '\', replace it with '\\'.
-  clientSecret: 'YOUR_CLIENT_SECRET', 
+  clientSecret: 'GFA8Q~5ZVbyRSvXq5UlbIikr6RzGp~Bbn-YJEcVc', 
 
   // Required to set to false if you don't want to validate issuer
   validateIssuer: true,
